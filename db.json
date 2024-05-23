@@ -1,0 +1,125 @@
+{
+  "recipes": [
+    {
+        "id": "1c4b6f90-5e78-4b29-9f0b-d56c3f5b6bda",
+        "name": "Chocolate Cake",
+        "ingredients": [
+            {
+                "id": "e4d0c62f-123b-4b4a-83f8-df22c7c623ec",
+                "name": "Flour",
+                "quantity": "2 cups"
+            },
+            {
+                "id": "cba9f234-623e-4f76-9d37-c0a96d2ae1d3",
+                "name": "Sugar",
+                "quantity": "1 cup"
+            },
+            {
+                "id": "b91760c6-0f8a-4b7c-b8fc-58fbe2c6d620",
+                "name": "Cocoa powder",
+                "quantity": "1/2 cup"
+            },
+            {
+                "id": "967f6d5e-7c2f-4c8f-880d-b6f45c4c9a98",
+                "name": "Baking powder",
+                "quantity": "1 tablespoon"
+            },
+            {
+                "id": "da6827fa-3e6f-448e-8b2a-05ff5dc19d9e",
+                "name": "Milk",
+                "quantity": "1 cup"
+            },
+            {
+                "id": "f25c8b6e-11d1-4f39-9189-6efc07c5bb3b",
+                "name": "Oil",
+                "quantity": "1/2 cup"
+            },
+            {
+                "id": "1a74a84b-3249-41c8-812e-61b43d1f5c6a",
+                "name": "Eggs",
+                "quantity": "3 units"
+            }
+        ],
+        "photo": "https://example.com/photos/chocolate_cake.jpg",
+        "instructions": [
+            {
+                "id": "09d1c6d8-6c3e-4a89-8b3d-d6210f64fdf5",
+                "step": "Preheat the oven to 180°C (350°F)."
+            },
+            {
+                "id": "6a9f6df8-ea48-499b-8ed5-7b0e6cf4b5a2",
+                "step": "In a bowl, mix the flour, sugar, cocoa powder, and baking powder."
+            },
+            {
+                "id": "e76b15f3-6b22-4e9d-83f4-52431f8740e1",
+                "step": "Add the milk, oil, and eggs, and mix well until you get a smooth batter."
+            },
+            {
+                "id": "bb586d68-d13d-4a80-9d78-9d2b84a68097",
+                "step": "Pour the batter into a greased baking pan and bake for about 35 minutes or until a toothpick inserted into the center comes out clean."
+            }
+        ]
+    },
+    {
+        "id": "d55b6f54-7a6b-4a9e-94b3-2f2e5874e9d5",
+        "name": "Fruit Salad",
+        "ingredients": [
+            {
+                "id": "8c9a2b3d-9b1e-4d9b-8c6f-6b8a5d2c674d",
+                "name": "Apple",
+                "quantity": "2 units"
+            },
+            {
+                "id": "0f1e6d54-b8c9-431e-939d-3f40e5e0f97f",
+                "name": "Banana",
+                "quantity": "3 units"
+            },
+            {
+                "id": "7a55c3e6-1d1b-4d1c-8d8d-0f8b5d2e7d2c",
+                "name": "Orange",
+                "quantity": "2 units"
+            },
+            {
+                "id": "a79c1d2b-6e7d-4c9f-8b4f-2f1e7e2c9f8d",
+                "name": "Grapes",
+                "quantity": "1 bunch"
+            },
+            {
+                "id": "c8b1d2f4-6b8d-4f8b-9f7e-3e7f1d9e6c1f",
+                "name": "Strawberries",
+                "quantity": "10 units"
+            },
+            {
+                "id": "e0b1d2e8-6c7d-4d9b-8e7c-2e7f1d9e6d2a",
+                "name": "Orange juice",
+                "quantity": "1/2 cup"
+            },
+            {
+                "id": "d1c8f1e6-5b8d-4f9b-9f8d-1e6b7d1c6a2b",
+                "name": "Honey",
+                "quantity": "2 tablespoons"
+            }
+        ],
+        "photo": "https://example.com/photos/fruit_salad.jpg",
+        "instructions": [
+            {
+                "id": "a9e8d1f3-7b4d-4c8d-8f4b-7e6c9d5e1d2b",
+                "step": "Wash and cut all the fruits into small pieces."
+            },
+            {
+                "id": "c7e5d8b6-8b2d-4c9b-8e6d-2f5b7e1d2c9a",
+                "step": "Place the cut fruits in a large bowl."
+            },
+            {
+                "id": "f3b1d2e6-6b7d-4c8b-9f7d-1e5c9d2a6e7b",
+                "step": "Add the orange juice and honey, and mix well."
+            },
+            {
+                "id": "b2d7c8e9-7d1f-4d9b-8e6d-2f1b7e6d5c3a",
+                "step": "Refrigerate for at least 30 minutes before serving."
+            }
+        ]
+    }
+]
+
+}
