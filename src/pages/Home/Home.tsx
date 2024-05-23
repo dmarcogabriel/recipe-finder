@@ -3,13 +3,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from "@mui/material/TextField";
+import { useQuery } from "@tanstack/react-query";
 
+import { getRecipes } from "./recipe.service";
 import {RecipeItem} from './RecipeItem';
 
-const MockRecipes = Array.from({ length: 5 });
 
 export const Home = () => {
   const [search, setSearch] = useState('');
+
+  const {data} = useQuery({
+    queryKey: ['recipes', search],
+    queryFn: () => getRecipes({ search })
+  });
 
   const handleChange = ({target}: ChangeEvent<HTMLInputElement>) => {
     setSearch(target.value);
@@ -32,8 +38,8 @@ export const Home = () => {
       />
 
       <Box sx={{ display: 'grid', gap: 2 }}>
-        {MockRecipes.map((_, i) =>
-          <RecipeItem key={String(i)} />
+        {data?.map(recipe => 
+          <RecipeItem key={recipe.id} recipe={recipe} />
         )}
       </Box>
     </Box>
