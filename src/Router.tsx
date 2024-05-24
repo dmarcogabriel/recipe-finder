@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 import { Home } from './pages/Home';
+import { RecipeDetails } from './pages/RecipeDetails';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/recipes/:recipeId',
-    element: <h1>To be implemented.</h1>
+    element: <RecipeDetails />
   }
 ]);
 

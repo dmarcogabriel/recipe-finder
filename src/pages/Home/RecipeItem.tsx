@@ -1,3 +1,4 @@
+import {useNavigate} from 'react-router-dom';
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -13,8 +14,10 @@ type IProps = {
   recipe: IRecipe
 };
 export const RecipeItem = ({recipe}: IProps) => {
+  const navigate = useNavigate();
+
   const handleSeeDetails = () => {
-    // todo: navigate to recipe details
+    navigate(`recipes/${recipe.id}`);
   };
 
   return (
