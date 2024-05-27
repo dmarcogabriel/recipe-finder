@@ -1,125 +1,491 @@
 {
   "recipes": [
     {
-        "id": "1c4b6f90-5e78-4b29-9f0b-d56c3f5b6bda",
-        "name": "Chocolate Cake",
-        "ingredients": [
-            {
-                "id": "e4d0c62f-123b-4b4a-83f8-df22c7c623ec",
-                "name": "Flour",
-                "quantity": "2 cups"
-            },
-            {
-                "id": "cba9f234-623e-4f76-9d37-c0a96d2ae1d3",
-                "name": "Sugar",
-                "quantity": "1 cup"
-            },
-            {
-                "id": "b91760c6-0f8a-4b7c-b8fc-58fbe2c6d620",
-                "name": "Cocoa powder",
-                "quantity": "1/2 cup"
-            },
-            {
-                "id": "967f6d5e-7c2f-4c8f-880d-b6f45c4c9a98",
-                "name": "Baking powder",
-                "quantity": "1 tablespoon"
-            },
-            {
-                "id": "da6827fa-3e6f-448e-8b2a-05ff5dc19d9e",
-                "name": "Milk",
-                "quantity": "1 cup"
-            },
-            {
-                "id": "f25c8b6e-11d1-4f39-9189-6efc07c5bb3b",
-                "name": "Oil",
-                "quantity": "1/2 cup"
-            },
-            {
-                "id": "1a74a84b-3249-41c8-812e-61b43d1f5c6a",
-                "name": "Eggs",
-                "quantity": "3 units"
-            }
-        ],
-        "photo": "https://example.com/photos/chocolate_cake.jpg",
-        "instructions": [
-            {
-                "id": "09d1c6d8-6c3e-4a89-8b3d-d6210f64fdf5",
-                "step": "Preheat the oven to 180°C (350°F)."
-            },
-            {
-                "id": "6a9f6df8-ea48-499b-8ed5-7b0e6cf4b5a2",
-                "step": "In a bowl, mix the flour, sugar, cocoa powder, and baking powder."
-            },
-            {
-                "id": "e76b15f3-6b22-4e9d-83f4-52431f8740e1",
-                "step": "Add the milk, oil, and eggs, and mix well until you get a smooth batter."
-            },
-            {
-                "id": "bb586d68-d13d-4a80-9d78-9d2b84a68097",
-                "step": "Pour the batter into a greased baking pan and bake for about 35 minutes or until a toothpick inserted into the center comes out clean."
-            }
-        ]
+      "id": "1c4b6f90-5e78-4b29-9f0b-d56c3f5b6bda",
+      "name": "Chocolate Cake",
+      "ingredients": [
+        {
+          "id": "e4d0c62f-123b-4b4a-83f8-df22c7c623ec",
+          "name": "Flour",
+          "quantity": "2 cups"
+        },
+        {
+          "id": "cba9f234-623e-4f76-9d37-c0a96d2ae1d3",
+          "name": "Sugar",
+          "quantity": "1 cup"
+        },
+        {
+          "id": "b91760c6-0f8a-4b7c-b8fc-58fbe2c6d620",
+          "name": "Cocoa powder",
+          "quantity": "1/2 cup"
+        },
+        {
+          "id": "967f6d5e-7c2f-4c8f-880d-b6f45c4c9a98",
+          "name": "Baking powder",
+          "quantity": "1 tablespoon"
+        },
+        {
+          "id": "da6827fa-3e6f-448e-8b2a-05ff5dc19d9e",
+          "name": "Milk",
+          "quantity": "1 cup"
+        },
+        {
+          "id": "f25c8b6e-11d1-4f39-9189-6efc07c5bb3b",
+          "name": "Oil",
+          "quantity": "1/2 cup"
+        },
+        {
+          "id": "1a74a84b-3249-41c8-812e-61b43d1f5c6a",
+          "name": "Eggs",
+          "quantity": "3 units"
+        }
+      ],
+      "photo": "https://www.recipetineats.com/wp-content/uploads/2018/03/Chocolate-Cake_9-SQ.jpg",
+      "instructions": [
+        {
+          "id": "09d1c6d8-6c3e-4a89-8b3d-d6210f64fdf5",
+          "step": "Preheat the oven to 180°C (350°F)."
+        },
+        {
+          "id": "6a9f6df8-ea48-499b-8ed5-7b0e6cf4b5a2",
+          "step": "In a bowl, mix the flour, sugar, cocoa powder, and baking powder."
+        },
+        {
+          "id": "e76b15f3-6b22-4e9d-83f4-52431f8740e1",
+          "step": "Add the milk, oil, and eggs, and mix well until you get a smooth batter."
+        },
+        {
+          "id": "bb586d68-d13d-4a80-9d78-9d2b84a68097",
+          "step": "Pour the batter into a greased baking pan and bake for about 35 minutes or until a toothpick inserted into the center comes out clean."
+        }
+      ],
+      "prep_time": "45 minutes"
     },
     {
-        "id": "d55b6f54-7a6b-4a9e-94b3-2f2e5874e9d5",
-        "name": "Fruit Salad",
-        "ingredients": [
-            {
-                "id": "8c9a2b3d-9b1e-4d9b-8c6f-6b8a5d2c674d",
-                "name": "Apple",
-                "quantity": "2 units"
-            },
-            {
-                "id": "0f1e6d54-b8c9-431e-939d-3f40e5e0f97f",
-                "name": "Banana",
-                "quantity": "3 units"
-            },
-            {
-                "id": "7a55c3e6-1d1b-4d1c-8d8d-0f8b5d2e7d2c",
-                "name": "Orange",
-                "quantity": "2 units"
-            },
-            {
-                "id": "a79c1d2b-6e7d-4c9f-8b4f-2f1e7e2c9f8d",
-                "name": "Grapes",
-                "quantity": "1 bunch"
-            },
-            {
-                "id": "c8b1d2f4-6b8d-4f8b-9f7e-3e7f1d9e6c1f",
-                "name": "Strawberries",
-                "quantity": "10 units"
-            },
-            {
-                "id": "e0b1d2e8-6c7d-4d9b-8e7c-2e7f1d9e6d2a",
-                "name": "Orange juice",
-                "quantity": "1/2 cup"
-            },
-            {
-                "id": "d1c8f1e6-5b8d-4f9b-9f8d-1e6b7d1c6a2b",
-                "name": "Honey",
-                "quantity": "2 tablespoons"
-            }
-        ],
-        "photo": "https://example.com/photos/fruit_salad.jpg",
-        "instructions": [
-            {
-                "id": "a9e8d1f3-7b4d-4c8d-8f4b-7e6c9d5e1d2b",
-                "step": "Wash and cut all the fruits into small pieces."
-            },
-            {
-                "id": "c7e5d8b6-8b2d-4c9b-8e6d-2f5b7e1d2c9a",
-                "step": "Place the cut fruits in a large bowl."
-            },
-            {
-                "id": "f3b1d2e6-6b7d-4c8b-9f7d-1e5c9d2a6e7b",
-                "step": "Add the orange juice and honey, and mix well."
-            },
-            {
-                "id": "b2d7c8e9-7d1f-4d9b-8e6d-2f1b7e6d5c3a",
-                "step": "Refrigerate for at least 30 minutes before serving."
-            }
-        ]
+      "id": "d55b6f54-7a6b-4a9e-94b3-2f2e5874e9d5",
+      "name": "Fruit Salad",
+      "ingredients": [
+        {
+          "id": "8c9a2b3d-9b1e-4d9b-8c6f-6b8a5d2c674d",
+          "name": "Apple",
+          "quantity": "2 units"
+        },
+        {
+          "id": "0f1e6d54-b8c9-431e-939d-3f40e5e0f97f",
+          "name": "Banana",
+          "quantity": "3 units"
+        },
+        {
+          "id": "7a55c3e6-1d1b-4d1c-8d8d-0f8b5d2e7d2c",
+          "name": "Orange",
+          "quantity": "2 units"
+        },
+        {
+          "id": "a79c1d2b-6e7d-4c9f-8b4f-2f1e7e2c9f8d",
+          "name": "Grapes",
+          "quantity": "1 bunch"
+        },
+        {
+          "id": "c8b1d2f4-6b8d-4f8b-9f7e-3e7f1d9e6c1f",
+          "name": "Strawberries",
+          "quantity": "10 units"
+        },
+        {
+          "id": "e0b1d2e8-6c7d-4d9b-8e7c-2e7f1d9e6d2a",
+          "name": "Orange juice",
+          "quantity": "1/2 cup"
+        },
+        {
+          "id": "d1c8f1e6-5b8d-4f9b-9f8d-1e6b7d1c6a2b",
+          "name": "Honey",
+          "quantity": "2 tablespoons"
+        }
+      ],
+      "photo": "https://hips.hearstapps.com/hmg-prod/images/pasta-salad-horizontal-jpg-1522265695.jpg?crop=1xw:0.8435812837432514xh;center,top&resize=1200:*",
+      "instructions": [
+        {
+          "id": "a9e8d1f3-7b4d-4c8d-8f4b-7e6c9d5e1d2b",
+          "step": "Wash and cut all the fruits into small pieces."
+        },
+        {
+          "id": "c7e5d8b6-8b2d-4c9b-8e6d-2f5b7e1d2c9a",
+          "step": "Place the cut fruits in a large bowl."
+        },
+        {
+          "id": "f3b1d2e6-6b7d-4c8b-9f7d-1e5c9d2a6e7b",
+          "step": "Add the orange juice and honey, and mix well."
+        },
+        {
+          "id": "b2d7c8e9-7d1f-4d9b-8e6d-2f1b7e6d5c3a",
+          "step": "Refrigerate for at least 30 minutes before serving."
+        }
+      ],
+      "prep_time": "15 minutes"
+    },
+    {
+      "id": "9f2b6c90-6c38-4b39-9f0c-d56d3f7b4adc",
+      "name": "Spaghetti Carbonara",
+      "ingredients": [
+        {
+          "id": "b1d7c6e4-6a3d-4c1c-9f8d-2c7e1d9e6f2a",
+          "name": "Spaghetti",
+          "quantity": "400g"
+        },
+        {
+          "id": "b5c7e6d4-5c3e-4d6d-9e6b-7d1e8c5d7b3c",
+          "name": "Pancetta",
+          "quantity": "150g"
+        },
+        {
+          "id": "d1b6c5f4-7e8d-4c9e-8e7f-1c9d5e1b3a4b",
+          "name": "Eggs",
+          "quantity": "3 units"
+        },
+        {
+          "id": "a7b9d4e3-6b8d-4f8e-9c7b-2d1e5f6c4a3b",
+          "name": "Parmesan cheese",
+          "quantity": "50g"
+        },
+        {
+          "id": "c7e8d5f6-7b1c-4d6e-9c7d-3a5e6f7b2c1d",
+          "name": "Black pepper",
+          "quantity": "to taste"
+        },
+        {
+          "id": "d8f9e6b5-7c1d-4c6f-8e9d-2a6e7d1c5b3a",
+          "name": "Salt",
+          "quantity": "to taste"
+        }
+      ],
+      "photo": "https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-square640-v2.jpg",
+      "instructions": [
+        {
+          "id": "f2c1e4b6-7d8d-4c7e-8b9d-1e6f3d5c7a2b",
+          "step": "Cook the spaghetti according to the package instructions."
+        },
+        {
+          "id": "c3d7e8f4-6b2d-4c9d-8e6c-1d5b7e1a6f3c",
+          "step": "In a pan, cook the pancetta until crispy."
+        },
+        {
+          "id": "a1e7c5d8-7b3c-4d9e-9c7b-2e1d5f6b3a2d",
+          "step": "In a bowl, beat the eggs and mix with grated Parmesan cheese."
+        },
+        {
+          "id": "d7c8e5b6-5b1d-4c9d-8f7b-1e6d3f2c7a4b",
+          "step": "Drain the spaghetti and mix it with the pancetta."
+        },
+        {
+          "id": "f3b9e1c6-6d7b-4c8e-9d7f-2a1e5d6c4b3a",
+          "step": "Remove the pan from the heat and add the egg and cheese mixture. Stir well."
+        },
+        {
+          "id": "c8d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "step": "Season with salt and black pepper to taste."
+        }
+      ],
+      "prep_time": "30 minutes"
+    },
+    {
+      "id": "7e3c6f54-7b4b-4a9e-94b3-2f2e5874e9d5",
+      "name": "Grilled Chicken Salad",
+      "ingredients": [
+        {
+          "id": "9c8a2b3d-9c1e-4d9b-8c6f-6b8a5d2c674d",
+          "name": "Chicken breast",
+          "quantity": "2 units"
+        },
+        {
+          "id": "7f1e6d54-b8c9-431e-939d-3f40e5e0f97f",
+          "name": "Lettuce",
+          "quantity": "1 head"
+        },
+        {
+          "id": "7b55c3e6-1d1b-4d1c-8d8d-0f8b5d2e7d2c",
+          "name": "Cherry tomatoes",
+          "quantity": "10 units"
+        },
+        {
+          "id": "b79c1d2b-6e7d-4c9f-8b4f-2f1e7e2c9f8d",
+          "name": "Cucumber",
+          "quantity": "1 unit"
+        },
+        {
+          "id": "a8b1d2f4-6b8d-4f8b-9f7e-3e7f1d9e6c1f",
+          "name": "Olive oil",
+          "quantity": "2 tablespoons"
+        },
+        {
+          "id": "d0b1d2e8-6c7d-4d9b-8e7c-2e7f1d9e6d2a",
+          "name": "Lemon juice",
+          "quantity": "1 tablespoon"
+        },
+        {
+          "id": "e1c8f1e6-5b8d-4f9b-9f8d-1e6b7d1c6a2b",
+          "name": "Salt",
+          "quantity": "to taste"
+        },
+        {
+          "id": "c2d1f3b7-7d1c-4c8e-9d7f-1e6d3f2c7a4b",
+          "name": "Black pepper",
+          "quantity": "to taste"
+        }
+      ],
+      "photo": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2021-05-big-beatiful-grilled-chicken-salad%2F2021-05-12_ATK1168",
+      "instructions": [
+        {
+          "id": "f4c1e3b6-7d8d-4c7e-8b9d-1e6f3d5c7a2b",
+          "step": "Season the chicken breasts with salt and black pepper."
+        },
+        {
+          "id": "c4d7e8f4-6b2d-4c9d-8e6c-1d5b7e1a6f3c",
+          "step": "Grill the chicken until fully cooked, then slice it."
+        },
+        {
+          "id": "a3e7c5d8-7b3c-4d9e-9c7b-2e1d5f6b3a2d",
+          "step": "Wash and chop the lettuce, cherry tomatoes, and cucumber."
+        },
+        {
+          "id": "d3c8e5b6-5b1d-4c9d-8f7b-1e6d3f2c7a4b",
+          "step": "In a large bowl, mix the lettuce, cherry tomatoes, cucumber, and grilled chicken slices."
+        },
+        {
+          "id": "f1b9e1c6-6d7b-4c8e-9d7f-2a1e5d6c4b3a",
+          "step": "Drizzle with olive oil and lemon juice, and toss well."
+        },
+        {
+          "id": "c3d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "step": "Season with salt and black pepper to taste."
+        }
+      ],
+      "prep_time": "25 minutes"
+    },
+    {
+      "id": "5c4b7f90-6c38-4b39-9f0b-d56d3f5b4adc",
+      "name": "Vegetable Stir-fry",
+      "ingredients": [
+        {
+          "id": "b7d7c6e4-6a3d-4c1c-9f8d-2c7e1d9e6f2a",
+          "name": "Bell peppers",
+          "quantity": "2 units"
+        },
+        {
+          "id": "a5c7e6d4-5c3e-4d6d-9e6b-7d1e8c5d7b3c",
+          "name": "Carrots",
+          "quantity": "2 units"
+        },
+        {
+          "id": "c1b6c5f4-7e8d-4c9e-8e7f-1c9d5e1b3a4b",
+          "name": "Broccoli",
+          "quantity": "1 head"
+        },
+        {
+          "id": "d7b9d4e3-6b8d-4f8e-9c7b-2d1e5f6c4a3b",
+          "name": "Soy sauce",
+          "quantity": "3 tablespoons"
+        },
+        {
+          "id": "e6e8d5f6-7b1c-4d6e-9c7d-3a5e6f7b2c1d",
+          "name": "Garlic",
+          "quantity": "2 cloves"
+        },
+        {
+          "id": "d2f9e6b5-7c1d-4c6f-8e9d-2a6e7d1c5b3a",
+          "name": "Olive oil",
+          "quantity": "2 tablespoons"
+        },
+        {
+          "id": "c1d8e5b6-7d8d-4c9e-9f7d-1e6d3f2c7a4b",
+          "name": "Salt",
+          "quantity": "to taste"
+        },
+        {
+          "id": "a2b7c8f6-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "name": "Black pepper",
+          "quantity": "to taste"
+        }
+      ],
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE95QXa6NzkfQ9tbzTupDtwp1ALLSMqstiFM9qE9J7yg&s",
+      "instructions": [
+        {
+          "id": "f1c1e4b6-7d8d-4c7e-8b9d-1e6f3d5c7a2b",
+          "step": "Cut the bell peppers and carrots into thin strips, and chop the broccoli into small florets."
+        },
+        {
+          "id": "c2d7e8f4-6b2d-4c9d-8e6c-1d5b7e1a6f3c",
+          "step": "Heat olive oil in a large pan over medium heat."
+        },
+        {
+          "id": "a3e7c5d8-7b3c-4d9e-9c7b-2e1d5f6b3a2d",
+          "step": "Add the garlic and sauté until fragrant."
+        },
+        {
+          "id": "d2c8e5b6-5b1d-4c9d-8f7b-1e6d3f2c7a4b",
+          "step": "Add the bell peppers, carrots, and broccoli to the pan and stir-fry for about 5-7 minutes."
+        },
+        {
+          "id": "f3b9e1c6-6d7b-4c8e-9d7f-2a1e5d6c4b3a",
+          "step": "Pour in the soy sauce and continue to stir-fry for another 2-3 minutes."
+        },
+        {
+          "id": "c8d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "step": "Season with salt and black pepper to taste."
+        }
+      ],
+      "prep_time": "20 minutes"
+    },
+    {
+      "id": "4d7b8f54-7c4a-4a8e-94a3-2f2e5874e9d5",
+      "name": "Pancakes",
+      "ingredients": [
+        {
+          "id": "b1d7c6e4-6a3d-4c1c-9f8d-2c7e1d9e6f2a",
+          "name": "Flour",
+          "quantity": "1 cup"
+        },
+        {
+          "id": "a5c7e6d4-5c3e-4d6d-9e6b-7d1e8c5d7b3c",
+          "name": "Milk",
+          "quantity": "1 cup"
+        },
+        {
+          "id": "d1b6c5f4-7e8d-4c9e-8e7f-1c9d5e1b3a4b",
+          "name": "Egg",
+          "quantity": "1 unit"
+        },
+        {
+          "id": "c7b9d4e3-6b8d-4f8e-9c7b-2d1e5f6c4a3b",
+          "name": "Baking powder",
+          "quantity": "2 teaspoons"
+        },
+        {
+          "id": "e7e8d5f6-7b1c-4d6e-9c7d-3a5e6f7b2c1d",
+          "name": "Salt",
+          "quantity": "1/4 teaspoon"
+        },
+        {
+          "id": "d2f9e6b5-7c1d-4c6f-8e9d-2a6e7d1c5b3a",
+          "name": "Sugar",
+          "quantity": "2 tablespoons"
+        },
+        {
+          "id": "c1d8e5b6-7d8d-4c9e-9f7d-1e6d3f2c7a4b",
+          "name": "Butter",
+          "quantity": "2 tablespoons"
+        }
+      ],
+      "photo": "https://www.allrecipes.com/thmb/WqWggh6NwG-r8PoeA3OfW908FUY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21014-Good-old-Fashioned-Pancakes-mfs_001-1fa26bcdedc345f182537d95b6cf92d8.jpg",
+      "instructions": [
+        {
+          "id": "f1c1e4b6-7d8d-4c7e-8b9d-1e6f3d5c7a2b",
+          "step": "In a bowl, mix the flour, sugar, baking powder, and salt."
+        },
+        {
+          "id": "c2d7e8f4-6b2d-4c9d-8e6c-1d5b7e1a6f3c",
+          "step": "In another bowl, beat the egg and mix it with milk."
+        },
+        {
+          "id": "a3e7c5d8-7b3c-4d9e-9c7b-2e1d5f6b3a2d",
+          "step": "Combine the wet ingredients with the dry ingredients and stir until smooth."
+        },
+        {
+          "id": "d2c8e5b6-5b1d-4c9d-8f7b-1e6d3f2c7a4b",
+          "step": "Heat a non-stick pan over medium heat and melt a bit of butter."
+        },
+        {
+          "id": "f3b9e1c6-6d7b-4c8e-9d7f-2a1e5d6c4b3a",
+          "step": "Pour about 1/4 cup of batter onto the pan for each pancake."
+        },
+        {
+          "id": "c8d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "step": "Cook until bubbles form on the surface, then flip and cook until golden brown."
+        }
+      ],
+      "prep_time": "20 minutes"
+    },
+    {
+      "id": "5d4b7f90-6c38-4b39-9f0b-d56d3f5b4adc",
+      "name": "Mushroom Risotto",
+      "ingredients": [
+        {
+          "id": "c7d7c6e4-6a3d-4c1c-9f8d-2c7e1d9e6f2a",
+          "name": "Arborio rice",
+          "quantity": "1 cup"
+        },
+        {
+          "id": "a6c7e6d4-5c3e-4d6d-9e6b-7d1e8c5d7b3c",
+          "name": "Mushrooms",
+          "quantity": "200g"
+        },
+        {
+          "id": "d2b6c5f4-7e8d-4c9e-8e7f-1c9d5e1b3a4b",
+          "name": "Onion",
+          "quantity": "1 unit"
+        },
+        {
+          "id": "e8b9d4e3-6b8d-4f8e-9c7b-2d1e5f6c4a3b",
+          "name": "Garlic",
+          "quantity": "2 cloves"
+        },
+        {
+          "id": "e8e8d5f6-7b1c-4d6e-9c7d-3a5e6f7b2c1d",
+          "name": "Vegetable broth",
+          "quantity": "4 cups"
+        },
+        {
+          "id": "d3f9e6b5-7c1d-4c6f-8e9d-2a6e7d1c5b3a",
+          "name": "Olive oil",
+          "quantity": "2 tablespoons"
+        },
+        {
+          "id": "c2d8e5b6-7d8d-4c9e-9f7d-1e6d3f2c7a4b",
+          "name": "Parmesan cheese",
+          "quantity": "1/2 cup"
+        },
+        {
+          "id": "a3b7c8f6-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "name": "Salt",
+          "quantity": "to taste"
+        },
+        {
+          "id": "b2d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "name": "Black pepper",
+          "quantity": "to taste"
+        }
+      ],
+      "photo": "https://www.allrecipes.com/thmb/Pow6PE9UyushNDB4wutXNnmriX8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/85389-gourmet-mushroom-risotto-86-7a2d218f53e94ccfaecc69b6fd93cab8.jpg",
+      "instructions": [
+        {
+          "id": "c1c1e4b6-7d8d-4c7e-8b9d-1e6f3d5c7a2b",
+          "step": "Heat the vegetable broth and keep it warm."
+        },
+        {
+          "id": "d2d7e8f4-6b2d-4c9d-8e6c-1d5b7e1a6f3c",
+          "step": "In a large pan, heat the olive oil and sauté the chopped onion and garlic until translucent."
+        },
+        {
+          "id": "b3e7c5d8-7b3c-4d9e-9c7b-2e1d5f6b3a2d",
+          "step": "Add the sliced mushrooms and cook until they release their moisture and become golden."
+        },
+        {
+          "id": "d3c8e5b6-5b1d-4c9d-8f7b-1e6d3f2c7a4b",
+          "step": "Add the Arborio rice and stir to coat it with the oil and vegetables."
+        },
+        {
+          "id": "f3b9e1c6-6d7b-4c8e-9d7f-2a1e5d6c4b3a",
+          "step": "Begin adding the warm vegetable broth one ladle at a time, stirring constantly until the liquid is absorbed before adding more."
+        },
+        {
+          "id": "c8d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "step": "Continue this process until the rice is creamy and cooked to al dente texture."
+        },
+        {
+          "id": "f8d1e5b7-7d2c-4f9e-8d6c-1e7f3b2d5a3c",
+          "step": "Stir in the grated Parmesan cheese and season with salt and black pepper to taste."
+        }
+      ],
+      "prep_time": "35 minutes"
     }
-]
-
+  ],
+  "favorited": []
 }
