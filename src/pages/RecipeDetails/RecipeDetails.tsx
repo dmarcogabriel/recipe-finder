@@ -1,19 +1,24 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import Box from '@mui/material/Box';
+import { useNavigate, useParams } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
+import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListSubHeader from '@mui/material/ListSubheader';
 import Typography from '@mui/material/Typography';
 import { useQuery } from "@tanstack/react-query";
 
 import recipePlaceholder from '@app/common/assets/recipePlaceholder.jpg';
+import { ErrorAlert } from "@app/common/components/ErrorAlert";
 import { FavoriteButton } from "@app/common/components/FavoriteButton";
 import { Header } from "@app/common/components/Header";
 
 import { getRecipeDetailsById } from "./recipeDetails.service";
+import { RecipeDetailsPlaceholder } from "./RecipeDetailsPlaceholder";
 
 type IRecipeDetailsParams = {
   recipeId: string
@@ -21,8 +26,9 @@ type IRecipeDetailsParams = {
 export const RecipeDetails = () => {
   const { recipeId } = useParams<IRecipeDetailsParams>();
   const [imageHasError, setImageHasError] = useState(false);
+  const navigate = useNavigate();
 
-  const query = useQuery({
+  const { data, isError, isLoading } = useQuery({
     queryKey: ['recipeDetails', recipeId],
     queryFn: () => getRecipeDetailsById({recipeId}),
   });
@@ -31,48 +37,63 @@ export const RecipeDetails = () => {
     setImageHasError(true);
   };
 
+  const handleError = () => {
+    navigate(-1);
+  };
+
   return (
     <>
-      <Header title={query.data?.name ?? 'Loading...'} />
+      <Header title={data?.name ?? 'Loading...'} />
 
-      <Box sx={{ p: 8 }}>
-        <Card>
-          <CardHeader
-            title={query.data?.name}
-            action={(
-              <FavoriteButton recipeId={recipeId} />
-            )}
-          />
-          <CardMedia
-            component="img"
-            height="190"
-            image={imageHasError ? query.data?.photo : recipePlaceholder}
-            alt={query.data?.name}
-            onError={handleImageError}
-          />
+      <Container sx={{ py: 2 }} maxWidth="md">
+        {isLoading && <RecipeDetailsPlaceholder />}
 
-          <CardContent sx={{ display: 'grid', gap: 4 }}>
-            <Box>
-              <Typography variant="subtitle1">Ingredients Required</Typography>
-              {query.data?.ingredients.map(ingredient => (
-                <Box key={ingredient.id} sx={{ display: 'flex', gap: 2 }}>
-                  <Typography>{ingredient.name}</Typography>
-                  <Typography>{ingredient.quantity}</Typography>
-                </Box>
-              ))}
-            </Box>
+        {!isLoading && (
+          <Card>
+            <CardHeader
+              title={data?.name}
+              action={(
+                <FavoriteButton recipeId={recipeId} />
+              )}
+            />
+            <CardMedia
+              component="img"
+              height="190"
+              image={imageHasError ? data?.photo : recipePlaceholder}
+              alt={data?.name}
+              onError={handleImageError}
+            />
 
-            <Divider />
+            <CardContent sx={{ display: 'grid', gap: 2 }}>
+              <List>
+                <ListSubHeader>Ingredients Required</ListSubHeader>
+                {data?.ingredients.map(ingredient => (
+                  <ListItem key={ingredient.id}>
+                    <Typography>{ingredient.name}</Typography>
 
-            <Box>
-              <Typography variant="subtitle1">Cooking Instructions</Typography>
-              {query.data?.instructions.map(instruction => (
-                <Typography key={instruction.id}>{instruction.step}</Typography>
-              ))} 
-            </Box>
-          </CardContent>
-        </Card>
-      </Box>
+                    <Typography>{ingredient.quantity}</Typography>
+                  </ListItem>
+                ))}
+              </List>
+
+              <Divider />
+
+              <List>
+                <ListSubHeader>Cooking Instructions</ListSubHeader>
+                {data?.instructions.map(instruction => (
+                  <ListItem key={instruction.id}>{instruction.step}</ListItem>
+                ))} 
+              </List>
+            </CardContent>
+          </Card>
+        )}
+      </Container>
+
+      <ErrorAlert
+        isVisible={isError}
+        onClose={handleError}
+        errorMessage="Ops! Something went wrong, try again later."
+      />
     </>
   );
 };
