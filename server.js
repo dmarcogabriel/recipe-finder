@@ -25,6 +25,45 @@ server.get('/recipes', ({query}, res) => {
     res.json(filteredRecipes);
 });
 
+server.post('/favorited', ({ body }, res) => {
+    const { recipeId } = body;
+
+    // This is to prevent item duplicates
+    const favoritedRecipe = router.db
+        .get('favorited')
+        .find(favorited => favorited.id === recipeId)
+        .value();
+
+    if (favoritedRecipe) return res.status(204).send();
+
+    const recipe = router.db
+        .get('recipes')
+        .find({ id: recipeId })
+        .value();
+
+    router.db.get('favorited').push(recipe).write();
+
+    return res.status(204).send();
+});
+
+server.delete('/favorited/:recipeId', ({ params }, res) => {
+    const recipeId = params.recipeId;
+
+    const favoritedRecipe = router.db
+        .get('favorited')
+        .find(favorited => favorited.id === recipeId)
+        .value();
+
+    if (favoritedRecipe) {
+        router.db
+            .get('favorited')
+            .remove({ id: recipeId })
+            .write();
+    }
+
+    res.status(204).send();
+});
+
 server.use(router);
 
 const PORT = 4000;
