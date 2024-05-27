@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
@@ -9,10 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
-import recipePlaceholder from '@app/common/assets/recipePlaceholder.jpg';
 import { FavoriteButton } from '@app/common/components/FavoriteButton';
 import { IRecipe } from "@app/common/types";
-
 
 
 type IProps = {
@@ -20,14 +17,9 @@ type IProps = {
 };
 export const RecipeItem = ({ recipe }: IProps) => {
   const navigate = useNavigate();
-  const [imageHasError, setImageHasError] = useState(false);
 
   const handleSeeDetails = () => {
     navigate(`/recipes/${recipe.id}`);
-  };
-
-  const handleImageError = () => {
-    setImageHasError(true);
   };
 
   return (
@@ -41,9 +33,8 @@ export const RecipeItem = ({ recipe }: IProps) => {
 
             <Avatar variant="rounded"
               alt={recipe.name}
-              src={imageHasError ? recipe.photo : recipePlaceholder}
+              src={recipe.photo}
               sx={{ width: 50, height: 50 }}
-              onError={handleImageError}
             />
 
             <Typography>

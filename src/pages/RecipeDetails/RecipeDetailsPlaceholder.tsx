@@ -4,7 +4,7 @@ import CardHeader from '@mui/material/CardHeader';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListSubHeader from '@mui/material/ListSubheader';
+import ListSubheader from '@mui/material/ListSubheader';
 import Skeleton from '@mui/material/Skeleton';
 
 
@@ -21,7 +21,7 @@ export const RecipeDetailsPlaceholder = () => (
 
         <CardContent sx={{ display: 'grid', gap: 2 }}>
           <List>
-            <ListSubHeader>Ingredients Required</ListSubHeader>
+            <ListSubheader>Ingredients Required</ListSubheader>
             {Array.from({ length: 5 }).map((_, i) => (
               <ListItem key={String(i + 1)}>
                 <Skeleton variant="text" width="100%" />
@@ -32,7 +32,7 @@ export const RecipeDetailsPlaceholder = () => (
           <Divider />
 
           <List>
-            <ListSubHeader>Cooking Instructions</ListSubHeader>
+            <ListSubheader>Cooking Instructions</ListSubheader>
             {Array.from({ length: 5 }).map((_, i) => (
               <ListItem key={String(i + 1)}>
                 <Skeleton variant="text" width="100%" />

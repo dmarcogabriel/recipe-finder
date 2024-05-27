@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -8,11 +7,10 @@ import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListSubHeader from '@mui/material/ListSubheader';
+import ListSubheader from '@mui/material/ListSubheader';
 import Typography from '@mui/material/Typography';
 import { useQuery } from "@tanstack/react-query";
 
-import recipePlaceholder from '@app/common/assets/recipePlaceholder.jpg';
 import { ErrorAlert } from "@app/common/components/ErrorAlert";
 import { FavoriteButton } from "@app/common/components/FavoriteButton";
 import { Header } from "@app/common/components/Header";
@@ -25,17 +23,12 @@ type IRecipeDetailsParams = {
 };
 export const RecipeDetails = () => {
   const { recipeId } = useParams<IRecipeDetailsParams>();
-  const [imageHasError, setImageHasError] = useState(false);
   const navigate = useNavigate();
 
   const { data, isError, isLoading } = useQuery({
     queryKey: ['recipeDetails', recipeId],
     queryFn: () => getRecipeDetailsById({recipeId}),
   });
-
-  const handleImageError = () => {
-    setImageHasError(true);
-  };
 
   const handleError = () => {
     navigate(-1);
@@ -59,19 +52,19 @@ export const RecipeDetails = () => {
             <CardMedia
               component="img"
               height="190"
-              image={imageHasError ? data?.photo : recipePlaceholder}
+              image={data?.photo}
               alt={data?.name}
-              onError={handleImageError}
+              onError={() => console.log('deu ruim em carregar')}
             />
 
             <CardContent sx={{ display: 'grid', gap: 2 }}>
               <List>
-                <ListSubHeader>Ingredients Required</ListSubHeader>
+                <ListSubheader>Ingredients Required</ListSubheader>
                 {data?.ingredients.map(ingredient => (
-                  <ListItem key={ingredient.id}>
+                  <ListItem key={ingredient.id} sx={{ display: 'flex', justifyContent: 'space-between'}}>
                     <Typography>{ingredient.name}</Typography>
 
-                    <Typography>{ingredient.quantity}</Typography>
+                    <Typography color="GrayText">{ingredient.quantity}</Typography>
                   </ListItem>
                 ))}
               </List>
@@ -79,7 +72,7 @@ export const RecipeDetails = () => {
               <Divider />
 
               <List>
-                <ListSubHeader>Cooking Instructions</ListSubHeader>
+                <ListSubheader>Cooking Instructions</ListSubheader>
                 {data?.instructions.map(instruction => (
                   <ListItem key={instruction.id}>{instruction.step}</ListItem>
                 ))} 

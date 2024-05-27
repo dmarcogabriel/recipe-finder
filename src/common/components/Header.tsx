@@ -24,6 +24,8 @@ export const Header = ({ title }: IProps) => {
   }, [pathname]);
 
   const handleFavorited = () => {
+    if (pathname === '/favorited') return;
+
     navigate('/favorited');
   };
 
@@ -47,6 +49,7 @@ export const Header = ({ title }: IProps) => {
         <IconButton onClick={handleSwitchTheme}>
           {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
+
         <IconButton onClick={handleFavorited} edge="end">
           <FavoriteIcon />
         </IconButton>
