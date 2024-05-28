@@ -1,15 +1,22 @@
-import { IRecipe } from '@app/common/types';
+import { IRecipe, ISortRecipeQuery } from '@app/common/types';
 import api from '@app/utils/api';
 
 type IGetRecipesQuery = {
-  search: string;
+  search?: string;
+  sortBy?: ISortRecipeQuery;
 };
 export const getRecipes = async (query: IGetRecipesQuery) => {
-  const { data } = await api.get<IRecipe[]>('recipes', {
-    params: {
-      search: query.search
-    }
-  });
+  const params: IGetRecipesQuery = {};
+
+  if (query.search) {
+    params.search = query.search;
+  }
+
+  if (query.sortBy) {
+    params.sortBy = query.sortBy;
+  }
+
+  const { data } = await api.get<IRecipe[]>('recipes', { params });
 
   return data;
 };

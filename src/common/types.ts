@@ -15,4 +15,7 @@ export type IRecipe = {
   photo: string
   ingredients: IIngredient[]
   instructions: IInstruction[]
+  prepTime: number
 };
+
+export type ISortRecipeQuery = 'ingredientCount' | 'name' | 'prepTime';

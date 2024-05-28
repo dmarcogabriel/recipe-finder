@@ -1,4 +1,5 @@
 import {useNavigate} from 'react-router-dom';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -37,9 +38,19 @@ export const RecipeItem = ({ recipe }: IProps) => {
               sx={{ width: 50, height: 50 }}
             />
 
-            <Typography>
-              {recipe.name}
-            </Typography>
+            <Box sx={{ display: 'grid', gap: 1 }}>
+              <Typography>
+                {recipe.name}
+              </Typography>
+
+              <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+                <AccessTimeIcon />
+
+                <Typography variant='body2' color="GrayText">
+                  {`${recipe.prepTime} minutes`}
+                </Typography>
+              </Box>
+            </Box>
           </Box>
         </CardContent>
 

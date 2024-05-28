@@ -8,21 +8,39 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
+const Sort = {
+    'name': recipes => recipes.sort((a, b) => a.name.localeCompare(b.name)),
+    'ingredientCount': recipes => recipes.sort((a, b) => a.ingredients.length - b.ingredients.length),
+    'prepTime': recipes => recipes.sort((a, b) => a.prepTime - b.prepTime)
+}
+
 server.get('/recipes', ({query}, res) => {
     const { search } = query;
 
     const recipes = router.db.get('recipes').value();
-  
-    if (!search) return res.send(recipes);
 
-    const ingredients = search.split(',').map(i => i.trim().toLowerCase());
-    const filteredRecipes = recipes.filter(recipe =>
-        recipe.ingredients.some(ingredient =>
-            ingredients.includes(ingredient.name.toLowerCase())
-        )
-    );
+    let filteredRecipes = recipes;
 
-    res.json(filteredRecipes);
+    if (search) {
+        const ingredients = search.split(',').map(i => i.trim().toLowerCase());
+        filteredRecipes = recipes.filter(recipe =>
+            recipe.ingredients.some(ingredient =>
+                ingredients.includes(ingredient.name.toLowerCase())
+            )
+        );
+    }
+
+    if (query.sortBy) {
+        try {
+            const sortedRecipes = Sort[query.sortBy](filteredRecipes);
+
+            return res.send(sortedRecipes)
+        } catch (e) {
+            return res.send(filteredRecipes);
+        }
+    }
+    
+    return res.send(filteredRecipes);
 });
 
 server.post('/favorited', ({ body }, res) => {

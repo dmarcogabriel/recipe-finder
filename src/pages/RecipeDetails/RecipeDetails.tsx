@@ -1,4 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
@@ -54,10 +56,15 @@ export const RecipeDetails = () => {
               height="190"
               image={data?.photo}
               alt={data?.name}
-              onError={() => console.log('deu ruim em carregar')}
             />
 
             <CardContent sx={{ display: 'grid', gap: 2 }}>
+              <Box sx={{ py: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+                <AccessTimeIcon />
+
+                <Typography>{`Preparation time: ${data?.prepTime} minutes`}</Typography>
+              </Box>
+
               <List>
                 <ListSubheader>Ingredients Required</ListSubheader>
                 {data?.ingredients.map(ingredient => (
